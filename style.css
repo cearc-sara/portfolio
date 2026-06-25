@@ -1,35 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f3ff;
+    background-color: #f7f4ff;
     color: #222;
     line-height: 1.6;
 }
 
-header {
-    background-color: #1f2a44;
+.hero {
+    background: linear-gradient(135deg, #1f2a44, #4b3f72);
     color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-header h1 {
-    margin-bottom: 10px;
-    font-size: 42px;
-}
-
-header p {
-    font-size: 18px;
+    padding-bottom: 70px;
 }
 
 nav {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo {
+    color: #f4a261;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
@@ -37,13 +38,44 @@ nav a:hover {
     color: #f4a261;
 }
 
+.hero-content {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button,
+.project-button {
+    display: inline-block;
+    background-color: #f4a261;
+    color: #1f2a44;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover,
+.project-button:hover {
+    background-color: #ffb977;
+}
+
 section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 30px;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 h2 {
@@ -55,7 +87,7 @@ h2 {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .skills-list span {
@@ -66,16 +98,21 @@ h2 {
 }
 
 .project-card {
-    border-left: 5px solid #f4a261;
-    padding: 15px;
-    margin-bottom: 20px;
     background-color: #fafafa;
-    border-radius: 8px;
+    border-left: 5px solid #4b3f72;
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 10px;
 }
 
 .project-card h3 {
     margin-top: 0;
     color: #2c3e50;
+}
+
+.featured {
+    border-left: 6px solid #f4a261;
+    background-color: #fff8f0;
 }
 
 a {
@@ -84,8 +121,23 @@ a {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background-color: #1f2a44;
     color: white;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
 }
